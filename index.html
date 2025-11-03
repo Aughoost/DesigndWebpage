@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inspect A Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .active-link {
+      @apply text-purple-600 font-semibold;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-900">
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <div class="animate-spin rounded-full h-16 w-16 border-4 border-purple-600 border-t-transparent"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex items-center justify-between py-5 px-6 md:px-12">
+      <div class="text-3xl font-extrabold text-purple-700 tracking-tight cursor-pointer select-none">
+        Inspect <span class="text-gray-900">A Home</span>
+      </div>
+      <nav class="space-x-8 hidden md:flex font-medium text-gray-700">
+        <a href="#top" class="hover:text-purple-600 transition">Home</a>
+        <a href="#about" class="hover:text-purple-600 transition">About Us</a>
+        <a href="#services" class="hover:text-purple-600 transition">Services</a>
+        <a href="#find-inspector" class="hover:text-purple-600 transition">Find an Inspector</a>
+        <a href="#find-inspector" class="hover:text-purple-600 transition">Pricing</a>
+        <a href="#Testimonials" class="hover:text-purple-600 transition">Testimonials</a>
+      </nav>
+      <a href="#contact"
+        class="hidden md:inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-lg transition shadow-lg">Contact
+        Now</a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-purple-700 focus:outline-none" aria-label="Toggle menu"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 shadow-md">
+      <a href="#top" class="block px-6 py-3 hover:bg-purple-50 text-purple-700 font-semibold">Home</a>
+      <a href="#about" class="block px-6 py-3 hover:bg-purple-50">About Us</a>
+      <a href="#services" class="block px-6 py-3 hover:bg-purple-50">Services</a>
+      <a href="#portfolio" class="block px-6 py-3 hover:bg-purple-50">Inspection Types</a>
+      <a href="#blog" class="block px-6 py-3 hover:bg-purple-50">Pricing</a>
+      <a href="#contact"
+        class="block px-6 py-3 bg-purple-600 text-white font-semibold text-center rounded-b-lg mt-2 mx-4">Contact
+        Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top"
+  class="relative min-h-screen flex items-center pt-24 bg-gradient-to-r from-purple-600 via-pink-600 to-pink-500 text-white overflow-hidden">
+  <div class="container mx-auto flex flex-col-reverse md:flex-row items-center gap-12 px-6 md:px-12 fade-in-up">
+    
+    <!-- Text Content -->
+    <div class="md:w-1/2 max-w-xl">
+      <h6 class="text-lg text-purple-200 mb-3 tracking-wide">Welcome to Your Inspection Partner</h6>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-lg">
+        Peace of Mind <em class="italic font-semibold">is</em> <span class="text-yellow-400">Our Priority</span>
+      </h1>
+      <p class="mt-6 text-purple-100 max-w-lg leading-relaxed">
+        Reliable home inspection services ensuring your property is safe, sound, and secure. Let us give you peace of mind with professional evaluations.
+      </p>
+      <a href="#contact"
+        class="inline-block mt-8 px-8 py-3 bg-yellow-400 text-purple-900 font-semibold rounded-lg shadow hover:bg-yellow-300 transition">
+        Book an Inspection
+      </a>
+    </div>
+
+    <!-- Image -->
+    <div class="md:w-1/2 max-w-lg rounded-xl overflow-hidden shadow-2xl ring-4 ring-purple-700 ring-opacity-60 transition hover:ring-opacity-80">
+      <img src="assets/images/houseinspection.jpg" alt="Home inspection service" class="w-full object-cover" />
+    </div>
+  </div>
+
+  <!-- Subtle overlay -->
+  <div class="absolute inset-0 bg-gradient-to-tr from-purple-900 via-transparent to-pink-900 opacity-30 pointer-events-none"></div>
+</section>
+  <!-- About Section -->
+<!-- About Us Section -->
+<!-- About Us Section -->
+<section id="about" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6 md:px-12">
+
+    <!-- Heading -->
+    <div class="text-center mb-16 fade-in-up">
+      <h2 class="text-4xl font-extrabold text-gray-900">
+        About <span class="text-purple-600">Inspect A Home</span>
+      </h2>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Text Column -->
+      <div class="fade-in-up">
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">Qualified & Experienced Inspectors</h3>
+        <p class="text-gray-700 mb-6">
+          Our inspectors are **licensed building practitioners** and experienced builders, trained to national standards. We provide detailed, clear, and reliable reports so you understand exactly what’s going on with your property.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">Efficient, Clear & Customer‑Focused</h3>
+        <p class="text-gray-700 mb-6">
+          We aim toBooked within 48 hours, and deliver written reports the same day or the next. Our process is streamlined: we liaise with agents or vendors on your behalf, and present findings in plain language—no jargon, just clarity.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">Why Choose Us?</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>Comprehensive visual inspections of all key areas of the home</li>
+          <li>Written reports with photographs, commentary & recommendations</li>
+          <li>Friendly, responsive support before & after the inspection</li>
+          <li>Commitment to honesty, integrity & your best outcome</li>
+        </ul>
+      </div>
+
+      <!-- Image Column -->
+      <div class="fade-in-up">
+        <img src="assets/images/about-us.jpg" alt="Inspect A Home team at work" class="rounded-xl shadow-2xl w-full object-cover">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12">
+
+      <!-- Hero -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-gray-900">Our <span class="text-purple-600">Services</span></h2>
+      </div>
+
+      <!-- Service Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div
+          class="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600 mb-4 mx-auto" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12h6m-6 4h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <h3 class="text-xl font-semibold mb-3 text-center">Written Building Inspection Report</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Thorough property assessment</li>
+            <li>Photo documentation of defects</li>
+            <li>Expert recommendations</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline" onclick="openModal('modal1')">Learn More
+            →</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600 mb-4 mx-auto" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8m-4 0v10m-4 0h8m-8 0a4 4 0 008 0V7H8v10z" />
+          </svg>
+          <h3 class="text-xl font-semibold mb-3 text-center">Toxicology Testing</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Same-day onsite screening</li>
+            <li>Professional lab analysis</li>
+            <li>Peace of mind before buying</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline" onclick="openModal('modal2')">Learn More
+            →</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600 mb-4 mx-auto" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+          </svg>
+          <h3 class="text-xl font-semibold mb-3 text-center">Healthy Homes</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Meet compliance standards</li>
+            <li>Assess heating, ventilation, insulation</li>
+            <li>Quick and reliable reporting</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline" onclick="openModal('modal3')">Learn More
+            →</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600 mb-4 mx-auto" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 2.69l.95 1.91c2.07 4.14 3.05 7.69 3.05 10.66a6 6 0 11-12 0c0-2.97.98-6.52 3.05-10.66L12 2.69z" />
+          </svg>
+          <h3 class="text-xl font-semibold mb-3 text-center">Moisture Testing</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Non-invasive testing up to 40mm</li>
+            <li>Focus on high-risk areas</li>
+            <li>Detailed readings in reports</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline" onclick="openModal('modal4')">Learn More
+            →</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600 mb-4 mx-auto" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-4 0V3m0 2h4m-4 0H8m2 7l2 2 4-4" />
+          </svg>
+          <h3 class="text-xl font-semibold mb-3 text-center">Pre-Settlement Inspections</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Ensure quality in new builds</li>
+            <li>Identify workmanship defects</li>
+            <li>Peace of mind before ownership</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline" onclick="openModal('modal5')">Learn More
+            →</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform">
+          <!-- Icon for Annual Property Health Check -->
+          <!-- Icon for Annual Property Health Check -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600 mb-4 mx-auto" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+
+          <h3 class="text-xl font-semibold mb-3 text-center">Annual Property Health Check</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Keep your property fit and healthy</li>
+            <li>Includes Healthy Homes inspection</li>
+            <li>Annual report and recommendations</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline" onclick="openModal('modal6')">Learn More
+            →</button>
+        </div>
+
+      </div>
+    </div>
+     <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative">
+    <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onclick="closeModal('modal1')">&times;</button>
+    <h3 class="text-2xl font-bold mb-4">Written Building Inspection Report for Residential / Commercial</h3>
+    <p class="text-gray-600 mb-4">If you prefer to have a checklist to follow then the written building report is for you. You will receive a thorough building inspection report which is detailed and easy to read. Our inspector will assess each area of the property, identifying defects and issues and clearly highlighting with photos, commentary and recommendations to fix areas of concern. We inspect internals, externals, site and provide moisture readings. If we can’t access a certain area, this will be clearly noted with reasoning. For a comprehensive summary on the current state of a property,get in touch with us today. You will also be provided with ongoing customer support with head office as well as your inspector should you need to discuss the findings, or have any queries going forward.</p>
+    <!-- <button class="text-purple-600 font-medium hover:underline">Learn More →</button> -->
+  </div>
+</div>
+
+<div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative">
+    <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onclick="closeModal('modal2')">&times;</button>
+    <h3 class="text-2xl font-bold mb-4">Toxicology Testing</h3>
+    <p class="text-gray-600 mb-4">Finding out your home is contaminated with illicit substances after you’ve purchased is a costly and stressful mistake. We provide a same day onsite screening test or a laboratory test which is sent away to a professional scientific lab environment for a more thorough analysis so you can get peace of mind. Book us now to complete a toxicology test check before you buy. </p>
+    <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
+  </div>
+</div>
+
+<div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative">
+    <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onclick="closeModal('modal3')">&times;</button>
+    <h3 class="text-2xl font-bold mb-4">Healthy Homes</h3>
+    <p class="text-gray-600 mb-4">Ensure your rental property meets the Healthy Homes compliance standards for heating, insulation, ventilation, moisture ingress, drainage and draught stopping. Talk to one of our expert team members to arrange your same day Healthy Home report.</p>
+    <!-- <button class="text-purple-600 font-medium hover:underline">Learn More →</button> -->
+  </div>
+</div>
+
+<div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative">
+    <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onclick="closeModal('modal4')">&times;</button>
+    <h3 class="text-2xl font-bold mb-4">Moisture Testing</h3>
+    <p class="text-gray-600 mb-4">For non-invasive moisture testing, we use the Trotec T660 Dielectric (or comparative technology) material moisturemeter which has a material moisture measurement of up to 40mm. We carry out moisture testing on all properties and concentrate mostly around exterior doors and windows, showers and other potential risk areas. All readings taken in the property are entered into the written report provided with our inspection. We also provide you with a measurable table so you can see the range your readings sit within. As always, our customer service team as well as your inspector is available to discuss these findings with you and offer expert advice.</p>
+    <!-- <button class="text-purple-600 font-medium hover:underline">Learn More →</button> -->
+  </div>
+</div>
+
+<div id="modal5" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative">
+    <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onclick="closeModal('modal5')">&times;</button>
+    <h3 class="text-2xl font-bold mb-4">Pre-Settlement Inspections </h3>
+    <p class="text-gray-600 mb-4">
+    If you are looking to purchase a new property from a developer or construct and house and land package and you need some Quality Assurance then contact us to assist you with a Pre-Settlement Inspection. Just because its a new property doesnt mean it doesnt have its fair share of workmanship issues and defects, so its better to be safe than sorry and arrange a pre-settlement report to have the property in tip top condition before you take ownership.  
+    </p>
+    <!-- <button class="text-purple-600 font-medium hover:underline">Learn More →</button> -->
+  </div>
+</div> 
+
+<div id="modal6" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative">
+    <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onclick="closeModal('modal6')">&times;</button>
+    <h3 class="text-2xl font-bold mb-4">Annual Property Health Check from $299 plus GST</h3>
+    <p class="text-gray-600 mb-4">
+    If you are looking to purchase a new property from a developer or construct and house and land package and you need some Quality Assurance then contact us to assist you with a Pre-Settlement Inspection. Just because its a new property doesnt mean it doesnt have its fair share of workmanship issues and defects, so its better to be safe than sorry and arrange a pre-settlement report to have the property in tip top condition before you take ownership.  
+    </p>
+    <!-- <button class="text-purple-600 font-medium hover:underline">Learn More →</button> -->
+  </div>
+</div>
+  </section>
+
+<!-- find a inspector section -->
+<section id="find-inspector" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    <!-- Left: Map -->
+    <div class="relative flex justify-center">
+      <img src="assets/images/nzmap.jpg" alt="Map of New Zealand"
+        class="max-w-md w-full rounded-lg shadow-lg border border-gray-200 transform hover:scale-105 transition duration-300">
+    </div>
+
+    <!-- Right: Info + Region Cards -->
+    <div>
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Find an <span class="text-purple-600">Inspector Near You</span>
+      </h2>
+      <p class="text-gray-600 mb-8 max-w-lg">
+        Our certified inspectors cover every major region across New Zealand — ready to deliver detailed, easy-to-understand property reports.
+      </p>
+
+      <!-- Region Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg text-gray-800">Auckland</h3>
+          <p class="text-sm text-gray-500 mt-1">5+ certified inspectors available</p>
+          <button onclick="showInspectors('inspectorModal', 'Auckland')" class="mt-3 text-purple-600 font-medium hover:underline">
+            View Inspectors →
+          </button>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg text-gray-800">Wellington</h3>
+          <p class="text-sm text-gray-500 mt-1">Covering Kapiti to Upper Hutt</p>
+          <button onclick="showInspectors('inspectorModal', 'Wellington')" class="mt-3 text-purple-600 font-medium hover:underline">
+            View Inspectors →
+          </button>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg text-gray-800">Christchurch</h3>
+          <p class="text-sm text-gray-500 mt-1">Certified for Southern region homes</p>
+          <button onclick="showInspectors('inspectorModal', 'Christchurch')" class="mt-3 text-purple-600 font-medium hover:underline">
+            View Inspectors →
+          </button>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition">
+          <h3 class="font-semibold text-lg text-gray-800">Tauranga</h3>
+          <p class="text-sm text-gray-500 mt-1">Fast turnaround & expert reports</p>
+          <button onclick="showInspectors('inspectorModal', 'Tauranga')" class="mt-3 text-purple-600 font-medium hover:underline">
+            View Inspectors →
+          </button>
+        </div>
+      </div>
+
+      <p class="text-gray-600 mt-8">
+        Can’t find your area? <a href="#contact" class="text-purple-600 font-semibold hover:underline">Contact us</a> — we’ll connect you with your nearest licensed inspector.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+ <div id="inspectorModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center overflow-auto p-4">
+  <div class="bg-white rounded-lg shadow-xl max-w-5xl w-full relative p-6">
+    <button onclick="closeModal('inspectorModal')" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 font-bold text-xl">&times;</button>
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Inspectors</h2>
+    <div id="modalContent" class="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto max-h-[70vh]"></div>
+  </div>
+</div>
+
+<!-- testimonials section? -->
+<section id="Testimonials" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">What People Say</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+        <div class="flex-1 flex flex-col justify-center mb-4">
+          <p class="text-gray-700 italic text-center">"Exceptional service, highly professional."</p>
+        </div>
+        <div class="flex justify-center text-yellow-400 mb-2">
+          ★★★★★
+        </div>
+        <h3 class="font-bold text-gray-900 text-center">Robert James Fischer</h3>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+        <div class="flex-1 flex flex-col justify-center mb-4">
+          <p class="text-gray-700 italic text-center">"Reliable, thorough, and extremely knowledgeable."</p>
+        </div>
+        <div class="flex justify-center text-yellow-400 mb-2">
+          ★★★★★
+        </div>
+        <h3 class="font-bold text-gray-900 text-center">Anatoly Karpov</h3>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+        <div class="flex-1 flex flex-col justify-center mb-4">
+          <p class="text-gray-700 italic text-center">"Professional and efficient, exceeded expectations."</p>
+        </div>
+        <div class="flex justify-center text-yellow-400 mb-2">
+          ★★★★★
+        </div>
+        <h3 class="font-bold text-gray-900 text-center">Magnus Carlsen</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- contact us -->
+
+<section id="contact" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">
+      Get in <span class="text-purple-600">Touch</span>
+    </h2>
+
+    <div class="lg:flex lg:gap-12">
+      <!-- Map & Info Column -->
+      <div class="lg:flex-1 lg:flex lg:flex-col space-y-6">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Our Office</h3>
+          <p class="text-gray-700 mb-2">123 Example Street, Suite 45<br>Your City, Country</p>
+          <p class="text-gray-700 mb-2">
+            Phone: <a href="tel:+64123456789" class="text-purple-600 hover:underline">+64 12 345 6789</a>
+          </p>
+          <p class="text-gray-700">
+            Email: <a href="mailto:info@example.com" class="text-purple-600 hover:underline">info@example.com</a>
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019987768108!2d174.7633323153092!3d-36.8484607799397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47f0dfe58b0f%3A0x500ef6143a2c9b0!2sAuckland%20CBD!5e0!3m2!1sen!2snz!4v1699059433161!5m2!1sen!2snz" 
+            class="w-full h-full"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form Column -->
+      <form id="contactForm" class="bg-white rounded-lg shadow-lg p-8 lg:flex-1 flex flex-col justify-between">
+        <div class="space-y-6">
+          <div>
+            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name"
+              class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+          </div>
+
+          <div>
+            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com"
+              class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+          </div>
+
+          <div>
+            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..."
+              class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-purple-600" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="bg-purple-600 text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-purple-700 transition mt-6">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- Google reCAPTCHA API -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- Portfolio Section -->
+<!-- <section id="portfolio" class="py-20 bg-white">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-4xl font-extrabold text-gray-900">See What Our Agency <em
+            class="italic text-purple-600">Offers</em> & What We <span
+            class="text-pink-600 font-semibold">Provide</span></h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer">
+          <img src="assets/images/portfolio-01.jpg" alt="Interior Inspection"
+            class="w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition-opacity rounded-lg">
+            Interior Inspection</div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer">
+          <img src="assets/images/portfolio-02.jpg" alt="Electrical Inspection"
+            class="w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition-opacity rounded-lg">
+            Electrical Inspection</div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer">
+          <img src="assets/images/portfolio-03.jpg" alt="Plumbing Inspection"
+            class="w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition-opacity rounded-lg">
+            Plumbing Inspection</div>
+        </div>
+        <div class="relative group rounded-lg overflow-hidden shadow-lg cursor-pointer">
+          <img src="assets/images/portfolio-04.jpg" alt="Roofing Inspection"
+            class="w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-lg font-semibold transition-opacity rounded-lg">
+            Roofing Inspection</div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+  <!-- Footer -->
+ <footer class="bg-gray-900 text-gray-200 py-12">
+  
+</footer>
+
+<script>
+
+</script>
+
+  <script>
+    // Hide preloader
+    window.addEventListener('load', function () {
+      document.getElementById('preloader').style.display = 'none';
+    });
+
+    // Smooth scroll & active link handling
+    const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (!targetSection) return; // Safety check
+
+        const offsetTop = targetSection.offsetTop - 60; // adjust for fixed header
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+
+        // Close mobile menu if open
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+
+        // Update active link
+        navLinks.forEach(l => l.classList.remove('active-link'));
+        this.classList.add('active-link');
+      });
+    });
+
+    // Highlight nav link on scroll
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 70;
+        if (window.pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active-link');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active-link');
+        }
+      });
+    });
+
+    // Optional: Set initial active link on page load
+    window.addEventListener('load', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 70;
+        if (window.pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active-link');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active-link');
+        }
+      });
+    });
+
+
+
+
+
+    //services
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+      document.getElementById(id).classList.add('flex');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+      document.getElementById(id).classList.remove('flex');
+    }
+
+    //inspectors
+
+
+
+    const inspectors = {
+  Auckland: [
+    {
+      name: "Garry Kasparov",
+      title: "Senior Building Inspector",
+      email: "info@inspecthouse.co.nz",
+      about: "Garry is a Qualified Construction Manager and Quantity Surveyor with a wealth of experience in residential construction, renovating, and contracting. Gentle and accommodating, he provides first-class customer service.",
+      qualifications: [
+        "NZ Level 6- Diploma in Construction Management",
+        "NZ Level 6- Strand in Quantity Surveying 2017",
+        "Trained in NZS4306:2005 Inspection Standards",
+        "Trained in Healthy Homes Standards NZ",
+        "NZS 3910:2013 (inc 2003) COC for Building and Civil Engineering Techniques"
+      ],
+      experience: [
+        "Wade Construction - Quantity Surveyor",
+        "New Builds and Refurbishments, including modern construction techniques and methodologies",
+        "Smoke Control NZ Project Manager",
+        "Commercial and Industrial Construction Management Projects",
+        "Health and Safety including SSSP plans"
+      ]
+    },
+    {
+      name: "Nemo Zhou",
+      title: "Building Inspector",
+      email: "Nemo@inspecthouse.co.nz",
+      about: "Nemo specializes in residential inspections with a focus on safety and compliance. Friendly and professional.",
+      qualifications: [
+        "NZ Diploma in Building Inspection",
+        "Certified in Health & Safety Standards"
+      ],
+      experience: [
+        "Residential Building Inspections Auckland Region",
+        "Safety Compliance Audits"
+      ]
+    }
+  ],
+  Wellington: [
+    {
+      name: "José Raúl Capablanca",
+      title: "Senior Inspector",
+      email: "jose@inspecthouse.co.nz",
+      about: "José Raúl Capablanca brings over 10 years of experience in commercial and residential inspections.",
+      qualifications: [
+        "NZ Diploma in Construction",
+        "Certified Building Inspector"
+      ],
+      experience: [
+        "Commercial Property Inspections",
+        "Residential Safety Audits"
+      ]
+    }
+  ],
+  Christchurch: [
+    {
+      name: "Robert James Fischer",
+      title: "Construction Inspector",
+      email: "robert@inspecthouse.co.nz",
+      about: "Robert is highly skilled in earthquake-resilient building inspections and renovation projects.",
+      qualifications: [
+        "NZ Certificate in Building Inspection",
+        "Trained in Structural Safety Assessment"
+      ],
+      experience: [
+        "Residential and Commercial Inspections",
+        "Project Management in Christchurch Region"
+      ]
+    }
+  ],
+  Tauranga: [
+    {
+      name: "Mikhail Tal",
+      title: "Building Inspector",
+      email: "mikhail@inspecthouse.co.nz",
+      about: "Mikhail focuses on timely and thorough inspections, ensuring client satisfaction every time.",
+      qualifications: [
+        "NZ Diploma in Construction Management",
+        "Certified Building Inspector"
+      ],
+      experience: [
+        "Residential Inspections",
+        "Health & Safety Compliance"
+      ]
+    }
+  ]
+};
+
+
+
+
+    function showInspectors(modalId, region) {
+  const modalContent = document.getElementById('modalContent');
+  modalContent.innerHTML = ""; // Clear previous content
+
+  const regionInspectors = inspectors[region] || [];
+
+  regionInspectors.forEach(inspector => {
+    const inspectorHTML = `
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold text-gray-900 mb-1">${inspector.name}</h3>
+        <p class="text-md font-semibold text-gray-700 mb-1">${inspector.title}</p>
+        <p class="text-purple-600 font-medium mb-3">${inspector.email}</p>
+        <h4 class="font-semibold text-gray-800 mb-1">About:</h4>
+        <p class="text-gray-700 text-sm mb-3">${inspector.about}</p>
+        <h4 class="font-semibold text-gray-800 mb-1">Qualifications:</h4>
+        <ul class="list-disc list-inside text-gray-700 text-sm mb-3">
+          ${inspector.qualifications.map(q => `<li>${q}</li>`).join('')}
+        </ul>
+        <h4 class="font-semibold text-gray-800 mb-1">Experience:</h4>
+        <ul class="list-disc list-inside text-gray-700 text-sm">
+          ${inspector.experience.map(e => `<li>${e}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+    modalContent.insertAdjacentHTML('beforeend', inspectorHTML);
+  });
+
+  openModal(modalId);
+}
+
+  // testimonials
+
+  // Footer form submission alert
+  document.getElementById('footerContactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you! Your message has been sent.');
+    this.reset();
+  });
+
+  </script>
