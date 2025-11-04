@@ -7,6 +7,11 @@
   <title>Inspect A Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -56,14 +61,14 @@
         </div>
 
         <!-- Desktop Menu -->
-             <div class="hidden md:flex lg:flex space-x-6">
+        <div class="hidden md:flex lg:flex space-x-6">
           <a href="#top" class="nav-link text-purple-700 font-semibold hover:text-purple-600">Home</a>
           <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About Us</a>
           <a href="#services" class="nav-link text-gray-700 hover:text-purple-600">Services</a>
           <a href="#find-inspector" class="nav-link text-gray-700 hover:text-purple-600">Find an Inspector</a>
           <a href="#Testimonials" class="nav-link text-gray-700 hover:text-purple-600">Testimonials</a>
           <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600">Contact Us</a>
-          <a href="https://aughoost.github.io/HouseInspect/view/pricing.html" target="_blank"
+          <a href="pricing.php" target="_blank"
             class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition">View
             Pricing</a>
           <!-- <a href="http://localhost/inspectahome/view/login.php"
@@ -91,7 +96,7 @@
       <a href="#contact" class=" nav-link block px-6 py-3 hover:bg-purple-50">Contact Us</a>
 
       <div class="flex flex-col space-y-2 px-6 py-4">
-        <a href="https://aughoost.github.io/HouseInspect/view/pricing.html" target="_blank"
+        <a href="http://localhost/inspectahome/view/pricing.php" target="_blank"
           class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-4 py-2 rounded-lg text-sm text-center transition shadow">
           View Pricing
         </a>
@@ -247,219 +252,284 @@
   </style>
 
 
+<!-- /services modal -->
 
-  <section id="services" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-12">
 
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold text-gray-900">
-          Our <span class="text-purple-600">Services</span>
-        </h2>
+<section id="services" class="py-20 bg-gray-50 opacity-0 transition-opacity duration-1000">
+  <div class="container mx-auto px-6 md:px-12">
+    <!-- Section Header -->
+    <div class="text-center mb-16 opacity-0 transition-opacity duration-1000 delay-200" id="services-header">
+      <h2 class="text-4xl font-extrabold text-gray-900">
+        Our <span class="text-purple-600">Services</span>
+      </h2>
+    </div>
+
+    <!-- Service Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="services-grid">
+      <!-- CARD 1 -->
+      <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group opacity-0 transition-opacity duration-1000 delay-200" 
+        onclick="openModal('modal1')">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+          <img src="assets/images/about-us.jpg" alt="Inspection Icon" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+          <h3 class="text-xl font-semibold mb-3 text-center">Written Building Inspection Report</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Thorough property assessment</li>
+            <li>Photo documentation of defects</li>
+            <li>Expert recommendations</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
+        </div>
       </div>
 
-      <!-- Service Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- CARD 1 -->
-        <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group"
-          onclick="openModal('modal1')">
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-            <img src="assets/images/about-us.jpg" alt="Inspection Icon" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-          </div>
-          <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
-            <h3 class="text-xl font-semibold mb-3 text-center">Written Building Inspection Report</h3>
-            <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
-              <li>Thorough property assessment</li>
-              <li>Photo documentation of defects</li>
-              <li>Expert recommendations</li>
-            </ul>
-            <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
-          </div>
+      <!-- CARD 2 -->
+      <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group opacity-0 transition-opacity duration-1000 delay-300" 
+        onclick="openModal('modal2')">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+          <img src="assets/images/toxicology-testing.jpg" alt="Toxicology Icon" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
-
-        <!-- CARD 2 -->
-        <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group"
-          onclick="openModal('modal2')">
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-            <img src="assets/images/toxicology-testing.jpg" alt="Toxicology Icon" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-          </div>
-          <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
-            <h3 class="text-xl font-semibold mb-3 text-center">Toxicology Testing</h3>
-            <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
-              <li>Same-day onsite screening</li>
-              <li>Professional lab analysis</li>
-              <li>Peace of mind before buying</li>
-            </ul>
-            <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
-          </div>
+        <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+          <h3 class="text-xl font-semibold mb-3 text-center">Toxicology Testing</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Same-day onsite screening</li>
+            <li>Professional lab analysis</li>
+            <li>Peace of mind before buying</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
         </div>
+      </div>
 
-        <!-- CARD 3 -->
-        <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group"
-          onclick="openModal('modal3')">
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-            <img src="assets/images/healthyhomes.jpg" alt="Healthy Homes Icon" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-          </div>
-          <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
-            <h3 class="text-xl font-semibold mb-3 text-center">Healthy Homes</h3>
-            <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
-              <li>Meet compliance standards</li>
-              <li>Assess heating, ventilation, insulation</li>
-              <li>Quick and reliable reporting</li>
-            </ul>
-            <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
-          </div>
+      <!-- CARD 3 -->
+      <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group opacity-0 transition-opacity duration-1000 delay-400" 
+        onclick="openModal('modal3')">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+          <img src="assets/images/healthyhomes.jpg" alt="Healthy Homes Icon" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
-
-        <!-- CARD 4 -->
-        <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group"
-          onclick="openModal('modal4')">
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-            <img src="assets/images/card4.jpg" alt="Moisture Testing Icon" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-          </div>
-          <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
-            <h3 class="text-xl font-semibold mb-3 text-center">Moisture Testing</h3>
-            <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
-              <li>Non-invasive testing up to 40mm</li>
-              <li>Focus on high-risk areas</li>
-              <li>Detailed readings in reports</li>
-            </ul>
-            <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
-          </div>
+        <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+          <h3 class="text-xl font-semibold mb-3 text-center">Healthy Homes</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Meet compliance standards</li>
+            <li>Assess heating, ventilation, insulation</li>
+            <li>Quick and reliable reporting</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
         </div>
+      </div>
 
-        <!-- CARD 5 -->
-        <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group"
-          onclick="openModal('modal5')">
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-            <img src="assets/images/card5.jpg" alt="Pre-Settlement Inspections Icon" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-          </div>
-          <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
-            <h3 class="text-xl font-semibold mb-3 text-center">Pre-Settlement Inspections</h3>
-            <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
-              <li>Ensure quality in new builds</li>
-              <li>Identify workmanship defects</li>
-              <li>Peace of mind before ownership</li>
-            </ul>
-            <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
-          </div>
+      <!-- CARD 4 -->
+      <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group opacity-0 transition-opacity duration-1000 delay-500" 
+        onclick="openModal('modal4')">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+          <img src="assets/images/card4.jpg" alt="Moisture Testing Icon" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
-
-        <!-- CARD 6 -->
-        <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group"
-          onclick="openModal('modal6')">
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-            <img src="assets/images/card6.jpg" alt="Annual Property Health Check" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-          </div>
-          <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
-            <h3 class="text-xl font-semibold mb-3 text-center">Annual Property Health Check</h3>
-            <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
-              <li>Meet compliance standards</li>
-              <li>Assess heating, ventilation, insulation</li>
-              <li>Quick and reliable reporting</li>
-            </ul>
-            <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
-          </div>
+        <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+          <h3 class="text-xl font-semibold mb-3 text-center">Moisture Testing</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Non-invasive testing up to 40mm</li>
+            <li>Focus on high-risk areas</li>
+            <li>Detailed readings in reports</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
         </div>
+      </div>
 
+      <!-- CARD 5 -->
+      <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group opacity-0 transition-opacity duration-1000 delay-600" 
+        onclick="openModal('modal5')">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+          <img src="assets/images/card5.jpg" alt="Pre-Settlement Inspections Icon" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+          <h3 class="text-xl font-semibold mb-3 text-center">Pre-Settlement Inspections</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Ensure quality in new builds</li>
+            <li>Identify workmanship defects</li>
+            <li>Peace of mind before ownership</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="service-card relative rounded-xl shadow-lg overflow-hidden cursor-pointer group opacity-0 transition-opacity duration-1000 delay-700" 
+        onclick="openModal('modal6')">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+          <img src="assets/images/card6.jpg" alt="Annual Property Health Check" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        <div class="relative p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+          <h3 class="text-xl font-semibold mb-3 text-center">Annual Property Health Check</h3>
+          <ul class="text-gray-600 mb-4 list-disc list-inside leading-relaxed">
+            <li>Meet compliance standards</li>
+            <li>Assess heating, ventilation, insulation</li>
+            <li>Quick and reliable reporting</li>
+          </ul>
+          <button class="text-purple-600 font-medium hover:underline">Learn More →</button>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  // IntersectionObserver to trigger fade-in animation
+  document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+      root: null, // use viewport as root
+      rootMargin: '0px',
+      threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const sections = document.querySelectorAll('#services, .service-card, #services-header');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'transition-opacity', 'duration-1000', 'ease-in-out');
+          observer.unobserve(entry.target); // Stop observing after fade-in
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+</style>
+
+
+
+
+<!-- 
+<style>
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+</style> -->
 
   <!-- ========================= -->
   <!--          MODALS           -->
   <!-- ========================= -->
+  <div class="modalsxz">
+
+ 
+
+    <div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+      <div
+        class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
+        <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
+          onclick="closeModal('modal1')">&times;</button>
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Written Building Inspection Report</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Our comprehensive inspection report includes detailed assessments, photo documentation, and expert
+          recommendations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+      <div
+        class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
+        <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
+          onclick="closeModal('modal2')">&times;</button>
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Toxicology Testing</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Ensure your environment is safe with our onsite toxicology testing and lab analysis — same-day results and
+          complete peace of mind.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+      <div
+        class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
+        <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
+          onclick="closeModal('modal3')">&times;</button>
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Healthy Homes</h3>
+        <p class="text-gray-700 leading-relaxed">
+          We assess heating, insulation, and ventilation to ensure your property meets Healthy Homes standards and
+          deliver
+          reliable reports fast.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modals 4,5,6 (similar structure) -->
+    <div id="modal4" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+      <div
+        class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
+        <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
+          onclick="closeModal('modal4')">&times;</button>
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Moisture Testing</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Non-invasive moisture testing up to 40mm deep, targeting high-risk areas, with detailed results included in
+          your
+          report.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal5" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+      <div
+        class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
+        <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
+          onclick="closeModal('modal5')">&times;</button>
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Pre-Settlement Inspections</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Ensure quality and workmanship before settlement. Identify any defects before finalizing your purchase.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal6" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+      <div
+        class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
+        <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
+          onclick="closeModal('modal6')">&times;</button>
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Annual Property Health Check</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Annual inspections to ensure compliance and optimal property health, covering insulation, heating, and
+          ventilation.
+        </p>
+      </div>
+    </div>
+  </div>
   <!-- Modal 1 -->
-  <div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-    <div
-      class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
-      <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
-        onclick="closeModal('modal1')">&times;</button>
-      <h3 class="text-2xl font-semibold mb-4 text-purple-700">Written Building Inspection Report</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Our comprehensive inspection report includes detailed assessments, photo documentation, and expert
-        recommendations.
-      </p>
-    </div>
-  </div>
 
-  <!-- Modal 2 -->
-  <div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-    <div
-      class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
-      <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
-        onclick="closeModal('modal2')">&times;</button>
-      <h3 class="text-2xl font-semibold mb-4 text-purple-700">Toxicology Testing</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Ensure your environment is safe with our onsite toxicology testing and lab analysis — same-day results and
-        complete peace of mind.
-      </p>
-    </div>
-  </div>
 
-  <!-- Modal 3 -->
-  <div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-    <div
-      class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
-      <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
-        onclick="closeModal('modal3')">&times;</button>
-      <h3 class="text-2xl font-semibold mb-4 text-purple-700">Healthy Homes</h3>
-      <p class="text-gray-700 leading-relaxed">
-        We assess heating, insulation, and ventilation to ensure your property meets Healthy Homes standards and deliver
-        reliable reports fast.
-      </p>
-    </div>
-  </div>
-
-  <!-- Modals 4,5,6 (similar structure) -->
-  <div id="modal4" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-    <div
-      class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
-      <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
-        onclick="closeModal('modal4')">&times;</button>
-      <h3 class="text-2xl font-semibold mb-4 text-purple-700">Moisture Testing</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Non-invasive moisture testing up to 40mm deep, targeting high-risk areas, with detailed results included in your
-        report.
-      </p>
-    </div>
-  </div>
-
-  <div id="modal5" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-    <div
-      class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
-      <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
-        onclick="closeModal('modal5')">&times;</button>
-      <h3 class="text-2xl font-semibold mb-4 text-purple-700">Pre-Settlement Inspections</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Ensure quality and workmanship before settlement. Identify any defects before finalizing your purchase.
-      </p>
-    </div>
-  </div>
-
-  <div id="modal6" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
-    <div
-      class="modal-content bg-white rounded-xl shadow-2xl p-8 max-w-lg w-full transform transition-all duration-300 relative">
-      <button class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 text-2xl"
-        onclick="closeModal('modal6')">&times;</button>
-      <h3 class="text-2xl font-semibold mb-4 text-purple-700">Annual Property Health Check</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Annual inspections to ensure compliance and optimal property health, covering insulation, heating, and
-        ventilation.
-      </p>
-    </div>
-  </div>
-
-  <script>
-
-  </script>
 
 
 
@@ -818,158 +888,158 @@
 
 
     // Open modal
-   const inspectors = {
-  Auckland: [
-    {
-      name: "Garry Kasparov",
-      title: "Senior Building Inspector",
-      email: "garry@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/1.jpg",
-      about: "Garry is a Qualified Construction Manager with years of experience.",
-      qualifications: ["NZ Level 6- Diploma in Construction Management"],
-      experience: ["Wade Construction - Quantity Surveyor"]
-    },
-    {
-      name: "Nemo Zhou",
-      title: "Building Inspector",
-      email: "nemo@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/2.jpg",
-      about: "Nemo specializes in residential inspections with a focus on safety.",
-      qualifications: ["NZ Diploma in Building Inspection"],
-      experience: ["Residential Building Inspections Auckland Region"]
-    },
-    {
-      name: "Alice Johnson",
-      title: "Building Inspector",
-      email: "alice@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/women/1.jpg",
-      about: "Alice ensures detailed and thorough inspection reports.",
-      qualifications: ["NZ Certificate in Building Inspection"],
-      experience: ["Residential and Commercial Inspections"]
-    },
-    {
-      name: "David Lee",
-      title: "Construction Inspector",
-      email: "david@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/3.jpg",
-      about: "David has expertise in earthquake-resistant structures.",
-      qualifications: ["NZ Diploma in Construction Management"],
-      experience: ["Commercial Property Inspections"]
-    }
-  ],
+    const inspectors = {
+      Auckland: [
+        {
+          name: "Garry Kasparov",
+          title: "Senior Building Inspector",
+          email: "garry@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/1.jpg",
+          about: "Garry is a Qualified Construction Manager with years of experience.",
+          qualifications: ["NZ Level 6- Diploma in Construction Management"],
+          experience: ["Wade Construction - Quantity Surveyor"]
+        },
+        {
+          name: "Nemo Zhou",
+          title: "Building Inspector",
+          email: "nemo@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/2.jpg",
+          about: "Nemo specializes in residential inspections with a focus on safety.",
+          qualifications: ["NZ Diploma in Building Inspection"],
+          experience: ["Residential Building Inspections Auckland Region"]
+        },
+        {
+          name: "Alice Johnson",
+          title: "Building Inspector",
+          email: "alice@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/women/1.jpg",
+          about: "Alice ensures detailed and thorough inspection reports.",
+          qualifications: ["NZ Certificate in Building Inspection"],
+          experience: ["Residential and Commercial Inspections"]
+        },
+        {
+          name: "David Lee",
+          title: "Construction Inspector",
+          email: "david@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/3.jpg",
+          about: "David has expertise in earthquake-resistant structures.",
+          qualifications: ["NZ Diploma in Construction Management"],
+          experience: ["Commercial Property Inspections"]
+        }
+      ],
 
-  Wellington: [
-    {
-      name: "José Raúl Capablanca",
-      title: "Senior Inspector",
-      email: "jose@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/4.jpg",
-      about: "José brings over 10 years of experience in inspections.",
-      qualifications: ["NZ Diploma in Construction"],
-      experience: ["Commercial Property Inspections"]
-    },
-    {
-      name: "Sophie Martin",
-      title: "Building Inspector",
-      email: "sophie@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/women/2.jpg",
-      about: "Sophie focuses on residential safety audits.",
-      qualifications: ["Certified Building Inspector"],
-      experience: ["Residential Safety Audits"]
-    },
-    {
-      name: "Liam Brown",
-      title: "Construction Inspector",
-      email: "liam@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/5.jpg",
-      about: "Liam specializes in structural inspections.",
-      qualifications: ["NZ Certificate in Building Inspection"],
-      experience: ["Commercial and Residential Projects"]
-    }
-  ],
+      Wellington: [
+        {
+          name: "José Raúl Capablanca",
+          title: "Senior Inspector",
+          email: "jose@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/4.jpg",
+          about: "José brings over 10 years of experience in inspections.",
+          qualifications: ["NZ Diploma in Construction"],
+          experience: ["Commercial Property Inspections"]
+        },
+        {
+          name: "Sophie Martin",
+          title: "Building Inspector",
+          email: "sophie@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/women/2.jpg",
+          about: "Sophie focuses on residential safety audits.",
+          qualifications: ["Certified Building Inspector"],
+          experience: ["Residential Safety Audits"]
+        },
+        {
+          name: "Liam Brown",
+          title: "Construction Inspector",
+          email: "liam@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/5.jpg",
+          about: "Liam specializes in structural inspections.",
+          qualifications: ["NZ Certificate in Building Inspection"],
+          experience: ["Commercial and Residential Projects"]
+        }
+      ],
 
-  Christchurch: [
-    {
-      name: "Robert James Fischer",
-      title: "Construction Inspector",
-      email: "robert@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/6.jpg",
-      about: "Robert is highly skilled in earthquake-resilient building inspections.",
-      qualifications: ["NZ Certificate in Building Inspection"],
-      experience: ["Residential and Commercial Inspections"]
-    },
-    {
-      name: "Emma Wilson",
-      title: "Building Inspector",
-      email: "emma@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/women/3.jpg",
-      about: "Emma ensures thorough property inspections and reports.",
-      qualifications: ["NZ Diploma in Construction"],
-      experience: ["Residential Building Inspections"]
-    },
-    {
-      name: "Noah Taylor",
-      title: "Senior Inspector",
-      email: "noah@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/7.jpg",
-      about: "Noah has experience with both commercial and residential buildings.",
-      qualifications: ["Certified Building Inspector"],
-      experience: ["Commercial Property Projects"]
-    }
-  ],
+      Christchurch: [
+        {
+          name: "Robert James Fischer",
+          title: "Construction Inspector",
+          email: "robert@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/6.jpg",
+          about: "Robert is highly skilled in earthquake-resilient building inspections.",
+          qualifications: ["NZ Certificate in Building Inspection"],
+          experience: ["Residential and Commercial Inspections"]
+        },
+        {
+          name: "Emma Wilson",
+          title: "Building Inspector",
+          email: "emma@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/women/3.jpg",
+          about: "Emma ensures thorough property inspections and reports.",
+          qualifications: ["NZ Diploma in Construction"],
+          experience: ["Residential Building Inspections"]
+        },
+        {
+          name: "Noah Taylor",
+          title: "Senior Inspector",
+          email: "noah@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/7.jpg",
+          about: "Noah has experience with both commercial and residential buildings.",
+          qualifications: ["Certified Building Inspector"],
+          experience: ["Commercial Property Projects"]
+        }
+      ],
 
-  Tauranga: [
-    {
-      name: "Mikhail Tal",
-      title: "Building Inspector",
-      email: "mikhail@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/8.jpg",
-      about: "Mikhail focuses on timely and thorough inspections.",
-      qualifications: ["NZ Diploma in Construction Management"],
-      experience: ["Residential Inspections"]
-    },
-    {
-      name: "Olivia Harris",
-      title: "Senior Inspector",
-      email: "olivia@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/women/4.jpg",
-      about: "Olivia provides detailed inspection reports for all properties.",
-      qualifications: ["NZ Certificate in Building Inspection"],
-      experience: ["Residential and Commercial Projects"]
-    },
-    {
-      name: "Ethan Walker",
-      title: "Construction Inspector",
-      email: "ethan@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/men/9.jpg",
-      about: "Ethan ensures compliance with NZ building standards.",
-      qualifications: ["Certified Building Inspector"],
-      experience: ["Residential Safety Audits"]
-    },
-    {
-      name: "Isabella Moore",
-      title: "Building Inspector",
-      email: "isabella@inspecthouse.co.nz",
-      photo: "https://randomuser.me/api/portraits/women/5.jpg",
-      about: "Isabella specializes in new builds and renovations.",
-      qualifications: ["NZ Diploma in Construction Management"],
-      experience: ["New Residential Builds"]
-    }
-  ]
-};
-  function showInspectors(modalId, region) {
-    const modal = document.getElementById(modalId);
-    const modalContent = document.getElementById('modalContent');
+      Tauranga: [
+        {
+          name: "Mikhail Tal",
+          title: "Building Inspector",
+          email: "mikhail@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/8.jpg",
+          about: "Mikhail focuses on timely and thorough inspections.",
+          qualifications: ["NZ Diploma in Construction Management"],
+          experience: ["Residential Inspections"]
+        },
+        {
+          name: "Olivia Harris",
+          title: "Senior Inspector",
+          email: "olivia@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/women/4.jpg",
+          about: "Olivia provides detailed inspection reports for all properties.",
+          qualifications: ["NZ Certificate in Building Inspection"],
+          experience: ["Residential and Commercial Projects"]
+        },
+        {
+          name: "Ethan Walker",
+          title: "Construction Inspector",
+          email: "ethan@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/men/9.jpg",
+          about: "Ethan ensures compliance with NZ building standards.",
+          qualifications: ["Certified Building Inspector"],
+          experience: ["Residential Safety Audits"]
+        },
+        {
+          name: "Isabella Moore",
+          title: "Building Inspector",
+          email: "isabella@inspecthouse.co.nz",
+          photo: "https://randomuser.me/api/portraits/women/5.jpg",
+          about: "Isabella specializes in new builds and renovations.",
+          qualifications: ["NZ Diploma in Construction Management"],
+          experience: ["New Residential Builds"]
+        }
+      ]
+    };
+    function showInspectors(modalId, region) {
+      const modal = document.getElementById(modalId);
+      const modalContent = document.getElementById('modalContent');
 
-    // Clear previous content
-    modalContent.innerHTML = '';
+      // Clear previous content
+      modalContent.innerHTML = '';
 
-    // Add inspectors
-    if (inspectors[region]) {
-      inspectors[region].forEach(inspector => {
-        const inspectorCard = document.createElement('div');
-        inspectorCard.className = 'bg-gray-50 border border-gray-200 rounded-lg p-5 shadow hover:shadow-lg transition';
-        inspectorCard.innerHTML = `
+      // Add inspectors
+      if (inspectors[region]) {
+        inspectors[region].forEach(inspector => {
+          const inspectorCard = document.createElement('div');
+          inspectorCard.className = 'bg-gray-50 border border-gray-200 rounded-lg p-5 shadow hover:shadow-lg transition';
+          inspectorCard.innerHTML = `
           <div class="flex items-center gap-5 mb-4">
             <div class="inspector-photo flex-shrink-0">
               <img src="${inspector.photo}" alt="${inspector.name}" class="w-24 h-24 object-cover rounded-full">
@@ -991,26 +1061,26 @@
             ${inspector.experience.map(e => `<li>${e}</li>`).join('')}
           </ul>
         `;
-        modalContent.appendChild(inspectorCard);
-      });
+          modalContent.appendChild(inspectorCard);
+        });
+      }
+
+      // Show modal
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
-    // Show modal
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-  }
+    // Function to close modal
+    function closeInspectorModal(modalId) {
+      const modal = document.getElementById(modalId);
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
 
-  // Function to close modal
-  function closeInspectorModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
-
-  // Close modal when clicking outside the content
-  document.getElementById('inspectorModal').addEventListener('click', function(e) {
-    if (e.target === this) closeInspectorModal('inspectorModal');
-  });
+    // Close modal when clicking outside the content
+    document.getElementById('inspectorModal').addEventListener('click', function (e) {
+      if (e.target === this) closeInspectorModal('inspectorModal');
+    });
 
 
 
@@ -1019,7 +1089,3 @@
 
 
   </script>
-
-
-
-
