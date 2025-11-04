@@ -1,4 +1,5 @@
 <!-- NAVIGATION -->
+ <div id="navbar">
 <nav class="bg-white shadow-md fixed w-full z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
@@ -15,12 +16,11 @@
         <a href="#find-inspector" class="nav-link text-gray-700 hover:text-purple-600">Find an Inspector</a>
         <a href="#Testimonials" class="nav-link text-gray-700 hover:text-purple-600">Testimonials</a>
         <a href="#contact" class="nav-link text-gray-700 hover:text-purple-600">Contact Us</a>
-        <a href="https://aughoost.github.io/HouseInspect/view/pricing.html" target="_blank"
+        <a href="pricing.php" target="_blank"
           class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition">View
           Pricing</a>
-        <!-- <a href="https://aughoost.github.io/HouseInspect/view/login.html"
-          class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition">Login
-        </a> -->
+        <!-- <a href="http://localhost/inspectahome/view/login.php"
+          class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition">Login</a> -->
       </div>
 
       <!-- Mobile Menu Button -->
@@ -35,29 +35,28 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 shadow-md">
-    <a href="#top" class="block px-6 py-3 hover:bg-purple-50 text-purple-700 font-semibold">Home</a>
-    <a href="#about" class="block px-6 py-3 hover:bg-purple-50">About Us</a>
-    <a href="#services" class="block px-6 py-3 hover:bg-purple-50">Services</a>
-    <a href="#find-inspector" class="block px-6 py-3 hover:bg-purple-50">Find an Inspector</a>
-    <a href="#testimonials" class="block px-6 py-3 hover:bg-purple-50">Testimonials</a>
-    <a href="#contact" class="block px-6 py-3 hover:bg-purple-50">Contact Us</a>
+  <div id="mobile-menu" class="nav-link md:hidden hidden bg-white border-t border-gray-200 shadow-md">
+    <a href="#top" class=" nav-link block px-6 py-3 hover:bg-purple-50 text-purple-700 font-semibold">Home</a>
+    <a href="#about" class=" nav-link block px-6 py-3 hover:bg-purple-50">About Us</a>
+    <a href="#services" class=" nav-link block px-6 py-3 hover:bg-purple-50">Services</a>
+    <a href="#find-inspector" class=" nav-link block px-6 py-3 hover:bg-purple-50">Find an Inspector</a>
+    <a href="#Testimonials" class=" nav-link block px-6 py-3 hover:bg-purple-50">Testimonials</a>
+    <a href="#contact" class=" nav-link block px-6 py-3 hover:bg-purple-50">Contact Us</a>
 
     <div class="flex flex-col space-y-2 px-6 py-4">
-      <a href="https://aughoost.github.io/HouseInspect/view/pricing.html" target="_blank"
+      <a href="http://localhost/inspectahome/view/pricing.php" target="_blank"
         class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-4 py-2 rounded-lg text-sm text-center transition shadow">
         View Pricing
       </a>
-      <!-- <a href="https://aughoost.github.io/HouseInspect/view/login.html"
+      <!-- <a href="http://localhost/inspectahome/view/login.php"
         class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-4 py-2 rounded-lg text-sm text-center transition shadow">
         Login
       </a> -->
     </div>
   </div>
 </nav>
-
+</div>
 <!-- JS for Toggle -->
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
