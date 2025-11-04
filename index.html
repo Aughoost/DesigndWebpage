@@ -47,7 +47,13 @@
   </div>
 
   <!-- Header -->
-  <?php include 'view/navbar.php'; ?>
+   <script>
+  fetch('view/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>
   <!-- Hero Section -->
   <!-- <section id="top"
   class="relative min-h-screen flex items-center pt-24 bg-gradient-to-r from-purple-600 via-pink-600 to-pink-500 text-white overflow-hidden">
@@ -886,3 +892,4 @@
 
 
     </script>
+
