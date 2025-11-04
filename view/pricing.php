@@ -114,29 +114,42 @@
       </div>
     </div>
 
-    <!-- Step 5: Payment -->
-    <div class="flex items-start  mb-4 space-x-4 bg-white p-6 rounded-lg shadow">
-      <div class="flex-shrink-0">
-        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">5</div>
-      </div>
-      <div class="flex-1 space-y-3">
-        <h2 class="text-xl font-semibold">Choose Payment Method</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <label class="cursor-pointer">
-            <div class="payment-card border border-gray-300 p-4 rounded-lg hover:border-blue-500 transition flex justify-between items-center">
-              <span>Bank Deposit</span>
-              <input type="radio" name="payment" value="bank" class="hidden">
-            </div>
-          </label>
-          <label class="cursor-pointer">
-            <div class="payment-card border border-gray-300 p-4 rounded-lg hover:border-blue-500 transition flex justify-between items-center">
-              <span>Credit Card</span>
-              <input type="radio" name="payment" value="credit" class="hidden">
-            </div>
-          </label>
-        </div>
-      </div>
+    <div class="flex items-start mb-4 space-x-4 bg-white p-6 rounded-lg shadow">
+  <!-- Step number -->
+  <div class="flex-shrink-0">
+    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-lg">
+      5
     </div>
+  </div>
+
+  <!-- Content -->
+  <div class="flex-1 space-y-3">
+    <h2 class="text-xl font-semibold">Choose Payment Method</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Bank Deposit -->
+      <label class="relative cursor-pointer">
+        <input type="radio" name="payment" value="bank" class="peer hidden" />
+        <div
+          class="border border-gray-300 rounded-lg p-4 flex justify-between items-center transition
+                 hover:border-blue-400 peer-checked:border-blue-600 peer-checked:bg-blue-50">
+          <span class="font-medium">Bank Deposit</span>
+        </div>
+      </label>
+
+      <!-- Credit Card -->
+      <label class="relative cursor-pointer">
+        <input type="radio" name="payment" value="credit" class="peer hidden" />
+        <div
+          class="border border-gray-300 rounded-lg p-4 flex justify-between items-center transition
+                 hover:border-blue-400 peer-checked:border-blue-600 peer-checked:bg-blue-50">
+          <span class="font-medium">Credit Card</span>
+        </div>
+      </label>
+    </div>
+  </div>
+</div>
+
 
     <!-- Totals -->
     <div class="bg-gray-800 text-white p-6 rounded-lg flex justify-between items-center">
