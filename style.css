@@ -28,17 +28,20 @@
   --color-info-100: rgba(59, 130, 246, 0.1);
 
   /* Text Colors */
-  --color-text: #1e293b;
-  --color-text-secondary: #475569;
+  --color-text: #ffffff;
+  --color-text-secondary: #ffffff;
   --color-text-muted: #94a3b8;
 
   /* Background Colors */
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-surface-hover: #f1f5f9;
+  /* --color-background: #ffffff; */
+  --color-background-sidenav:#1f2453;
+    --color-background: #1f2453;
+  /* --color-background: #181c3b; */
+  --color-surface: #181c3b;
+  --color-surface-hover: #181B45;
 
   /* Border Colors */
-  --color-border: #e2e8f0;
+  --color-border: #1f2453;
 
   /* Typography */
   --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -203,7 +206,7 @@ button {
 /* Sidebar */
 .dashboard-sidebar {
   width: var(--sidebar-width);
-  background: var(--color-background);
+  background: var(--color-background-sidenav);
   display: flex;
   flex-direction: column;
   position: sticky;
